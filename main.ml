@@ -8,7 +8,7 @@ let () =
 *)
 
 let n = 5 in
-  Printf.printf "factorial of %d is %d\n" n (Factorial.factorial n)
+Printf.printf "factorial of %d is %d\n" n (Factorial.factorial n);
 
 (*
 let sorted =
@@ -22,7 +22,16 @@ let () =
   Printf.printf "\n" 
 *)
 
+let a = [|1; 2; 3; 4; 5|] in
+  Printf.printf "%d " (Array.length a);
+
+
+for x = 1 to 5 do
+  print_int x;
+  print_newline ()
+done
+
 let () =
   List.iter (fun x -> Printf.printf "%b " (x mod 2 = 0)) [1;2;3;4];
   List.iter (fun x -> Printf.printf "%d " (x * 2)) [1;2;3;4];
-  print_endline ""
+  print_newline ()
